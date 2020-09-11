@@ -11,8 +11,16 @@ body {
 button {
   background-color: $button-color !important;
   color: $button-text-color !important;
+  border: 0px !important;
 }
 
+.navlink {
+  color: $text-color;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+nav {
+  background-color: $page-background;
+}
 h1 {
   font-family: 'Lato', sans-serif;
   color: $text-color;
