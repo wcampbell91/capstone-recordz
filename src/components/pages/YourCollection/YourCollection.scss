@@ -1,0 +1,24 @@
+@import '../../../styles/variables';
+
+.card-columns {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.sort {
+  margin-left: 150px !important
+}
+.sort-buttons {
+  margin-left: 150px !important;
+  margin-bottom: 35px;
+}
+.sort-button {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18pt;
+  background-color: transparent !important;
+  color: $text-color !important;
+}
+
+.nxtbtn {
+  margin-left: 40px !important
+}

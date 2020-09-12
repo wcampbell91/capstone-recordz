@@ -18,8 +18,8 @@ button {
 }
 
 
-h1 {
-  font-family: 'Lato', sans-serif;
+h1, .card-title {
+  font-family: 'Lato', sans-serif !important;
   color: $text-color;
 }
 

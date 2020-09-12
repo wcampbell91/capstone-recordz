@@ -26,7 +26,7 @@ const MyNavbar = (props) => {
           <NavLink className="navlink" tag={NavLink} to="/home"> Home </NavLink>
           <NavLink className="navlink" tag={NavLink} to="/collection"> MyCollection </NavLink>
           <NavLink className="navlink" tag={NavLink} to="/single"> RNDM </NavLink>
-          <NavLink className="navlink" tag={NavLink} to="" onClick={logMeOut}> Logout </NavLink>
+          <NavLink className="navlink logout" tag={NavLink} to="" onClick={logMeOut}> Logout </NavLink>
         </nav>
       );
     }
