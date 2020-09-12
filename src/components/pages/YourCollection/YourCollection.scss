@@ -1,6 +1,7 @@
 @import '../../../styles/variables';
 
-.card-columns {
+.card-deck {
+  justify-content: center !important;
   margin-left: 150px;
   margin-right: 150px;
 }
