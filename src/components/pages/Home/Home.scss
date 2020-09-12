@@ -1,82 +1,82 @@
-.Auth {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 50% 40% 50%;
-}
+// .Auth {
+//   display: grid;
+//   grid-template-columns: 100%;
+//   grid-template-rows: 50% 40% 50%;
+// }
 
-.welcome {
-  display: grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 50% 50%;
-}
+// .welcome {
+//   display: grid;
+//   grid-template-rows: 100%;
+//   grid-template-columns: 50% 50%;
+// }
 
-.features {
-  display: grid;
-  // grid-template-rows: 100%;
-  grid-template-columns: 33% 33% 33%;
-}
+// .features {
+//   display: grid;
+//   // grid-template-rows: 100%;
+//   grid-template-columns: 33% 33% 33%;
+// }
 
-.feature1 {
-  margin-top: 15%;
-  margin-left: 15%;
-  margin-right: 15%;
+// .feature1 {
+//   margin-top: 15%;
+//   margin-left: 15%;
+//   margin-right: 15%;
 
-}
+// }
 
-.feature2 {
-  margin-top: 15%;
-  margin-left: 15%;
-  margin-right: 15%;
-}
+// .feature2 {
+//   margin-top: 15%;
+//   margin-left: 15%;
+//   margin-right: 15%;
+// }
 
-.feature3 {
-  margin-top: 15%;
-  margin-left: 15%;
-  margin-right: 15%;
-}
+// .feature3 {
+//   margin-top: 15%;
+//   margin-left: 15%;
+//   margin-right: 15%;
+// }
 
-.blowout {
-  display: grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 50% 50%;
-}
+// .blowout {
+//   display: grid;
+//   grid-template-rows: 100%;
+//   grid-template-columns: 50% 50%;
+// }
 
-.welcome-message {
-  grid-column: 1 / 1;
-  margin: auto;
-  margin-left: 15%;
-  margin-right: 15%; 
-}
+// .welcome-message {
+//   grid-column: 1 / 1;
+//   margin: auto;
+//   margin-left: 15%;
+//   margin-right: 15%; 
+// }
 
-.recordImg {
-  grid-column: 2 / 2;
-  margin: auto;
-}
+// .recordImg {
+//   grid-column: 2 / 2;
+//   margin: auto;
+// }
 
-.elevatorsImg {
-  box-shadow: 10px 10px;
-}
+// .elevatorsImg {
+//   box-shadow: 10px;
+// }
 
-.feature1 {
-  grid-column: 1 / 1;
-}
+// .feature1 {
+//   grid-column: 1 / 1;
+// }
 
-.feature2 {
-  grid-column: 2 / 2;
-}
+// .feature2 {
+//   grid-column: 2 / 2;
+// }
 
-.feature3 {
-  grid-column: 3 / 3;
-}
+// .feature3 {
+//   grid-column: 3 / 3;
+// }
 
-.blowout-message {
-  grid-column: 1 / 1;
-  margin-top: 20%;
-  margin-left: 15%;
-  margin-right: 15%;
-}
+// .blowout-message {
+//   grid-column: 1 / 1;
+//   margin-top: 20%;
+//   margin-left: 15%;
+//   margin-right: 15%;
+// }
 
-.blowout-img {
-  grid-column: 2 / 2;
-  margin: auto;
-}
+// .blowout-img {
+//   grid-column: 2 / 2;
+//   margin: auto;
+// }
