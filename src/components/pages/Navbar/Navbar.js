@@ -23,10 +23,10 @@ const MyNavbar = (props) => {
     if (authed) {
       return (
         <nav className="ml-auto">
-          <NavLink className="mr-3 navlink" tag={NavLink} to="/home"> Home </NavLink>
-          <NavLink className="mr-3 navlink" tag={NavLink} to="/collection"> MyCollection </NavLink>
-          <NavLink className="mr-3 navlink" tag={NavLink} to="/single"> RNDM </NavLink>
-          <NavLink className="mr-3 navlink" tag={NavLink} to="" onClick={logMeOut}> Logout </NavLink>
+          <NavLink className="navlink" tag={NavLink} to="/home"> Home </NavLink>
+          <NavLink className="navlink" tag={NavLink} to="/collection"> MyCollection </NavLink>
+          <NavLink className="navlink" tag={NavLink} to="/single"> RNDM </NavLink>
+          <NavLink className="navlink" tag={NavLink} to="" onClick={logMeOut}> Logout </NavLink>
         </nav>
       );
     }
@@ -34,6 +34,7 @@ const MyNavbar = (props) => {
 
   return (
     <nav className="navbar navbar-expand-lg">
+      <NavLink className="navlink navbar-brand" to="/home">Recordz</NavLink>
       <button className="navbar-toggler" type="button" onClick={toggle}>
         <span className="navbar-toggler-icon"></span>
       </button>

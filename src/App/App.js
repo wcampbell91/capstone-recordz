@@ -53,7 +53,7 @@ const App = () => {
       <BrowserRouter>
         <React.Fragment>
           <MyNavbar authed={authed} />
-          <div className="container">
+          <div className="App-box container-fluid">
             <Switch>
               <PrivateRoute path="/home" component={Home} authed={authed} />
               <PrivateRoute path="/collection" component={YourCollection} authed={authed} />
