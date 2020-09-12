@@ -10,13 +10,17 @@
 }
 .sort-buttons {
   margin-left: 150px !important;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .sort-button {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18pt;
   background-color: transparent !important;
   color: $text-color !important;
+}
+
+.album-title {
+  font-style: italic;
 }
 
 .nxtbtn {
