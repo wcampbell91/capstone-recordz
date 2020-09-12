@@ -84,7 +84,7 @@ const YourCollection = () => {
         <button className="btn sort-button nextbtn" id="genre" onClick={sortByGenre}>Genre</button>
       </div>
 
-      <div className="card-columns">
+      <div className="card-deck">
         {albumCards}
       </div>
     </div>
