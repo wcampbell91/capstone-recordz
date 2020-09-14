@@ -11,6 +11,9 @@ const getCollectionByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const getCollectionById = (recordId) => axios.get(`${baseUrl}/records/${recordId}.json`);
+
 export default {
   getCollectionByUid,
+  getCollectionById,
 };
