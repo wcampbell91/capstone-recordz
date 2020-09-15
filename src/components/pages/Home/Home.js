@@ -5,6 +5,7 @@ import elevators from '../../shared/Images/13thfloorelevators.jpg';
 import './Home.scss';
 
 const Home = () => {
+
   return (
       <div className="Auth mt-2 justify-content-center">
         <div className="welcome container-fluid justify-content-center">
@@ -13,7 +14,7 @@ const Home = () => {
             <h6 className="text-center m-4">
               Have you ever forgotten what records you have? Do you want to listen to something different that may be in the lost cracks of your collection? Or do you just want to look through your collection right here in the palm of your hand? With Recordz you can do all that and more. We'll be your one-stop shop for digitally storing and viewing your record collection!
             </h6>
-            <button className="btn btn-danger text-center pl-4 pr-4">View Your Collection</button>
+            {/* <Link to="" className="btn btn-danger text-center pl-4 pr-4">View Your Collection</Link> */}
           </div>
           <div className="recordImg text-center">
           <img src={recordImg} alt="Recordz Logo" width="500" height="500" />
