@@ -10,6 +10,11 @@
 body {
   background-color: $page-background;
 }
+Link {
+  background-color: $button-color !important;
+  color: $button-text-color !important;
+  border: 0px !important;
+}
 
 button {
   background-color: $button-color !important;

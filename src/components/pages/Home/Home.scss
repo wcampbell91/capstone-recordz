@@ -1,4 +1,12 @@
-// .Auth {
+@import '../../../styles/variables';
+
+.button {
+  background-color: $button-color !important;
+  color: $button-text-color !important;
+  border: 0px !important;
+}
+
+// .Au
 //   display: grid;
 //   grid-template-columns: 100%;
 //   grid-template-rows: 50% 40% 50%;
