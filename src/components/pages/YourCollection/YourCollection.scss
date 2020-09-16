@@ -7,7 +7,7 @@
 }
 
 .sort {
-  margin-left: 150px !important
+  margin-left: 160px !important
 }
 .sort-buttons {
   margin-left: 150px !important;
@@ -26,4 +26,17 @@
 
 .nxtbtn {
   margin-left: 40px !important
+}
+
+.collectionFunctions {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+}
+
+.newButton {
+  background-color: $button-color !important;
+  color: $button-text-color !important;
+  border: 0px !important;
+  justify-content: right;
 }

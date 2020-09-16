@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import collectionData from '../../../helpers/data/collectionData';
 import authData from '../../../helpers/data/authData';
@@ -77,11 +78,18 @@ const YourCollection = (props) => {
   return (
     <div className="YourCollection container-fluid">
       <h1 className="text-center mt-4">Your Collection</h1>
-      <h2 className="sort">Sort By:</h2>
-      <div className="sort-buttons">
-        <button className="btn sort-button" id="artist" onClick={sortByArtist}>Artist</button>
-        <button className="btn sort-button nextbtn" id="album" onClick={sortByAlbum}>Album</button>
-        <button className="btn sort-button nextbtn" id="genre" onClick={sortByGenre}>Genre</button>
+      <div className="collectionFunctions">
+        <div className="sortFunction">
+          <h2 className="sort">Sort By:</h2>
+            <div className="sort-buttons">
+              <button className="btn sort-button" id="artist" onClick={sortByArtist}>Artist</button>
+              <button className="btn sort-button nextbtn" id="album" onClick={sortByAlbum}>Album</button>
+              <button className="btn sort-button nextbtn" id="genre" onClick={sortByGenre}>Genre</button>
+            </div>
+        </div>
+        <div className="add">
+          <Link to="/collection/add" className="newButton text-right btn btn-danger">Add New Record</Link>
+        </div>
       </div>
 
       <div className="card-deck">
