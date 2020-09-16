@@ -16,6 +16,7 @@ import YourCollection from '../components/pages/YourCollection/YourCollection';
 import SingleAlbum from '../components/pages/SingleAlbum/SingleAlbum';
 import AddAlbum from '../components/pages/AddAlbum/AddAlbum';
 import EditAlbum from '../components/pages/EditAlbum/EditAlbum';
+import RandomRecord from '../components/pages/Random/RandomRecord';
 
 import './App.scss';
 
@@ -60,6 +61,7 @@ const App = () => {
               <PrivateRoute path="/collection/new" component={AddAlbum} authed={authed} />
               <PrivateRoute path="/edit/:recordId" component={EditAlbum} authed={authed} />
               <PrivateRoute path="/single/:recordId" component={SingleAlbum} authed={authed} />
+              <PrivateRoute path="/random" component={RandomRecord} authed={authed} />
               <PublicRoute path="/auth" component={Auth} authed={authed} />
               <Redirect from="*" to="/home" />
             </Switch>

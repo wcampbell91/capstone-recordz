@@ -23,8 +23,8 @@ const MyNavbar = (props) => {
       return (
         <nav className="ml-auto">
           <NavLink className="navlink" tag={NavLink} to="/home"> Home </NavLink>
-          <NavLink className="navlink" tag={NavLink} to="/collection" > MyCollection </NavLink>
-          <NavLink className="navlink" tag={NavLink} to='/rndm'> RNDM </NavLink>
+          <NavLink className="navlink" tag={NavLink} to="/collection"> MyCollection </NavLink>
+          <NavLink className="navlink" tag={NavLink} to="/random"> RNDM </NavLink>
           <NavLink className="navlink logout" tag={NavLink} to="" onClick={logMeOut}> Logout </NavLink>
         </nav>
       );
