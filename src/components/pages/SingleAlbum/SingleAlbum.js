@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+// import { Link } from 'react-router-dom';
 
 import collectionData from '../../../helpers/data/collectionData';
 import discogsData from '../../../helpers/data/discogsData';
@@ -9,6 +10,7 @@ const SingleAlbum = (props) => {
   const [record, setRecord] = useState({});
   const [recordDetail, setRecordDetail] = useState({});
   const [flipped, setFlipped] = useState(false);
+  const [tracklist, setTracklist] = useState([]);
 
   useEffect(() => {
     const { recordId } = props.match.params;
@@ -22,13 +24,17 @@ const SingleAlbum = (props) => {
   const moreInfoEvent = (e) => {
     e.preventDefault();
     discogsData.getAlbumById(record.albumId)
-      .then(({ data }) => setRecordDetail(data))
+      .then(({ data }) => {
+        setRecordDetail(data);
+        setTracklist(data.tracklist);
+      })
       .catch((err) => console.error(err));
     setFlipped(!flipped);
   };
 
   const flipClass = flipped ? 'flipper' : '';
   const flipClass2 = flipped ? 'card-img-overlay' : 'card-img-overlay image';
+
   return (
 
   <div className={flipClass}>
@@ -46,12 +52,27 @@ const SingleAlbum = (props) => {
             </div>
           </div>
         </div>
-        <div className="flip-card-back">
-          <button className="btn btn-danger" onClick={moreInfoEvent}>Back</button>
-          {recordDetail.artists && recordDetail.artists.length ? <h3>{recordDetail.artists[0].name}</h3> : ''}
-          {recordDetail.tracklist && recordDetail.tracklist.length ? <ol>{<li>{recordDetail.tracklist[0].title}</li>} </ol> : ''}
-          {/* {recordDetail.artists && recordDetail.artists.length ? <h3>{recordDetail.artists[0].name}</h3> : ''} */}
-          <button className="btn-btn-danger" onClick={moreInfoEvent}></button>
+        <div className="flip-card-back text-center">
+          <div className="recordDetailContainer">
+            <div className="backButton">
+              <button className="btn btn-danger mb-3 mt-3" onClick={moreInfoEvent}>Back</button>
+            </div>
+            <div className="detailInfo">
+              {recordDetail.artists && recordDetail.artists.length ? <h2>{recordDetail.artists[0].name}</h2> : ''}
+              {recordDetail.title ? <h2>{recordDetail.title}</h2> : ''}
+              <h2>Release: {recordDetail.year ? recordDetail.year : ''}</h2>
+              <h2>Genres: {recordDetail.genres ? recordDetail.genres : ''}</h2>
+            </div>
+            <div className="tracklist">
+              <h2 className="text-left ml-3">Tracklist:</h2>
+              <ol className="">
+                { tracklist ? tracklist.map((track) => <li className="text-left">{track.title}</li>) : ''}
+              </ol>
+            </div>
+            <div className="discogsLink">
+              <a href={recordDetail.resourceUrl} className="btn btn-danger mt-4">See at Discogs</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

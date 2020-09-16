@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import firebase from 'firebase';
 import 'firebase/auth';
 
 const MyNavbar = (props) => {
   const { authed } = props;
-
   const [isOpen, setIsOpen] = useState(false);
 
   const logMeOut = (e) => {
@@ -24,8 +23,8 @@ const MyNavbar = (props) => {
       return (
         <nav className="ml-auto">
           <NavLink className="navlink" tag={NavLink} to="/home"> Home </NavLink>
-          <NavLink className="navlink" tag={NavLink} to="/collection"> MyCollection </NavLink>
-          <NavLink className="navlink" tag={NavLink} to="/single"> RNDM </NavLink>
+          <NavLink className="navlink" tag={NavLink} to="/collection" > MyCollection </NavLink>
+          <NavLink className="navlink" tag={NavLink} to='/rndm'> RNDM </NavLink>
           <NavLink className="navlink logout" tag={NavLink} to="" onClick={logMeOut}> Logout </NavLink>
         </nav>
       );

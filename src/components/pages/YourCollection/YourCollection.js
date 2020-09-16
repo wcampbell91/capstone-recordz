@@ -6,7 +6,7 @@ import AlbumCards from '../../shared/AlbumCards/AlbumCards';
 
 import './YourCollection.scss';
 
-const YourCollection = () => {
+const YourCollection = (props) => {
   const [collection, setCollection] = useState([]);
 
   const getCollection = () => {

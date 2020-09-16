@@ -1,15 +1,31 @@
+@import '../../../styles/variables';
+
+.recordDetailContainer {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 25% 55% 10%;
+}
 .singleAlbumCard {
   margin: auto;
   width: 800px;
   height: 800px;
   border: 0px;
+  border-radius: 15px;
   background-color: transparent;
   perspective: 1000px;
 };
 
-// .flip-card:hover .flip-card-inner {
-//   transform: rotateY(180deg);
-// }
+li {
+  color: $text-color;
+  padding-left: 10px;
+  font-size: 12pt;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+ol {
+  padding-left: 10px;
+  list-style-position: inside;
+}
 
 .flipper .flip-card-inner {
   transform: rotateY(180deg);
@@ -36,6 +52,8 @@
   background-color: #173F5F;
   color: white;
   transform: rotateY(180deg);
+  display: grid;
+  grid-template: 1 / 1;
 }
 
 .card-img {
@@ -69,4 +87,22 @@
 
 .card-img:hover + .card-img-overlay{
   opacity: 1;
+}
+
+.backButton {
+  grid-row: 1 / 1;
+}
+
+.detailInfo {
+  // margin-top: 20px;
+  grid-row: 2 / 2;
+}
+
+.tracklist {
+  grid-row: 3 / 3;
+  // margin-left: 325px;
+}
+
+.discogsLink {
+  grid-row: 4 / 4;
 }
