@@ -21,4 +21,13 @@
 .viewButton {
   justify-content: center !important;
   text-align: center !important;
+  background-color: $button-color !important;
+  color: $button-text-color !important;
+  border: 0px !important;
+}
+
+.deleteButton {
+  background-color: $button-text-color !important;
+  color: whitesmoke !important;
+  border: 0px !important;
 }

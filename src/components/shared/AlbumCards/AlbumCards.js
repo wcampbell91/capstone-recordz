@@ -4,9 +4,14 @@ import { Link } from 'react-router-dom';
 import './AlbumCards.scss';
 
 const AlbumCards = (props) => {
-  const { record } = props;
+  const { record, deleteRecord } = props;
 
   const singleRecordLink = `/single/${record.id}`;
+
+  const deleteEvent = (e) => {
+    e.preventDefault();
+    deleteRecord(record.id);
+  };
 
   return (
     <div className="card albumCard text-center">
@@ -15,6 +20,7 @@ const AlbumCards = (props) => {
         <h3 className="card-title text-left">{record.artist}</h3>
         <h4 className="card-title album-title text-left">{record.album}</h4>
         <Link to={singleRecordLink} className="btn btn-primary viewButton">View Album</Link>
+        <button className=" ml-2 btn btn-danger deleteButton" onClick={deleteEvent}><i class="fas fa-lg fa-trash-alt"></i></button>
       </div>
     </div>
   );
