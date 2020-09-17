@@ -6,9 +6,9 @@ import collectionData from '../../../helpers/data/collectionData';
 
 const AddAlbum = () => {
   const [artist, setArtist] = useState('');
-  const [artistId, setArtistId] = useState(null);
+  const [artistId, setArtistId] = useState('');
   const [album, setAlbum] = useState('');
-  const [albumId, setAlbumId] = useState(null);
+  const [albumId, setAlbumId] = useState('');
   const [genre, setGenre] = useState('');
   const [coverImage, setCoverImage] = useState('');
   const history = useHistory();
@@ -65,75 +65,77 @@ const AddAlbum = () => {
   return (
     <div className="AddAlbum">
       <h1>Add A Record</h1>
-      <form className="Col-6 offset-3">
-        <div className="form-group">
-          <lable htmlFor ="artistName">Artist Name</lable>
-          <input
-          type="text"
-          class="form-control"
-          id="artistName"
-          value={artist}
-          placeholder="Enter Artist Name"
-          onChange={setArtistEvent}
-          />
-        </div>
-        <div className="form-group">
-          <lable htmlFor ="artistId">Artist Id</lable>
-          <input
-          type="text"
-          class="form-control"
-          id="artistId"
-          value={artistId}
-          placeholder="Enter Artist Id"
-          onChange={setArtistIdEvent}
-          />
-        </div>
-        <div className="form-group">
-          <lable htmlFor ="albumName">Album Name</lable>
-          <input
-          type="text"
-          class="form-control"
-          id="albumName"
-          value={album}
-          placeholder="Enter Album Name"
-          onChange={setAlbumEvent}
-          />
-        </div>
-        <div className="form-group">
-          <lable htmlFor ="albumId">Album Id</lable>
-          <input
-          type="text"
-          class="form-control"
-          id="albumId"
-          value={albumId}
-          placeholder="Enter Album Id"
-          onChange={setAlbumIdEvent}
-          />
-        </div>
-        <div className="form-group">
-          <lable htmlFor ="genre">Genre</lable>
-          <input
-          type="text"
-          class="form-control"
-          id="genre"
-          value={genre}
-          placeholder="Enter Artist Name"
-          onChange={setGenreEvent}
-          />
-        </div>
-        <div className="form-group">
-          <lable htmlFor ="coverImg">Cover Art</lable>
-          <input
-          type="text"
-          class="form-control"
-          id="coverImg"
-          value={coverImage}
-          placeholder="Enter Artist Name"
-          onChange={setCoverImageEvent}
-          />
-        </div>
-        <button className="btn btn-danger" type="submit" onClick={createAlbumEvent}>Submit</button>
-      </form>
+      <div className="col-6 offset-3 text-center">
+        <form className="">
+          <div className="form-group">
+            <label htmlFor ="artistName">Artist Name</label>
+            <input
+            type="text"
+            className="form-control"
+            id="artistName"
+            value={artist}
+            placeholder="Enter Artist Name"
+            onChange={setArtistEvent}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor ="artistId">Artist Id</label>
+            <input
+            type="text"
+            className="form-control"
+            id="artistId"
+            value={artistId}
+            placeholder="Enter Artist Id"
+            onChange={setArtistIdEvent}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor ="albumName">Album Name</label>
+            <input
+            type="text"
+            className="form-control"
+            id="albumName"
+            value={album}
+            placeholder="Enter Album Name"
+            onChange={setAlbumEvent}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor ="albumId">Album Id</label>
+            <input
+            type="text"
+            className="form-control"
+            id="albumId"
+            value={albumId}
+            placeholder="Enter Album Id"
+            onChange={setAlbumIdEvent}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor ="genre">Genre</label>
+            <input
+            type="text"
+            className="form-control"
+            id="genre"
+            value={genre}
+            placeholder="Enter Genre"
+            onChange={setGenreEvent}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor ="coverImg">Cover Art</label>
+            <input
+            type="text"
+            className="form-control"
+            id="coverImg"
+            value={coverImage}
+            placeholder="Enter Image Url"
+            onChange={setCoverImageEvent}
+            />
+          </div>
+          <button className="btn btn-danger" type="submit" onClick={createAlbumEvent}>Submit</button>
+        </form>
+      </div>
     </div>
   );
 };

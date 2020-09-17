@@ -58,7 +58,7 @@ const App = () => {
             <Switch>
               <PrivateRoute path="/home" component={Home} authed={authed} />
               <PrivateRoute path="/collection" component={YourCollection} authed={authed} />
-              <PrivateRoute path="/collection/add" component={AddAlbum} authed={authed} />
+              <PrivateRoute path="/add" component={AddAlbum} authed={authed} />
               <PrivateRoute path="/edit/:recordId" component={EditAlbum} authed={authed} />
               <PrivateRoute path="/single/:recordId" component={SingleAlbum} authed={authed} />
               <PrivateRoute path="/random" component={RandomRecord} authed={authed} />
