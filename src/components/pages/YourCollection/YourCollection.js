@@ -73,7 +73,16 @@ const YourCollection = (props) => {
     setCollection(sortedCollection);
   };
 
-  const albumCards = collection.map((record) => <AlbumCards key={record.id} record={record} />);
+  const deleteRecord = (recordId) => {
+    collectionData.deleteRecord(recordId)
+      .then((res) => {
+        console.warn(res);
+        getCollection();
+      })
+      .catch((err) => console.error(err));
+  };
+
+  const albumCards = collection.map((record) => <AlbumCards key={record.id} record={record} deleteRecord={deleteRecord}/>);
 
   return (
     <div className="YourCollection container-fluid">

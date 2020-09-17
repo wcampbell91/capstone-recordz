@@ -15,8 +15,11 @@ const getCollectionById = (recordId) => axios.get(`${baseUrl}/records/${recordId
 
 const addAlbum = (newAlbum) => axios.post(`${baseUrl}/records.json`, newAlbum);
 
+const deleteRecord = (recordId) => axios.delete(`${baseUrl}/records/${recordId}.json`);
+
 export default {
   getCollectionByUid,
   getCollectionById,
   addAlbum,
+  deleteRecord,
 };
