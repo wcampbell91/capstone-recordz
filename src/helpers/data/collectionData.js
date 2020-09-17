@@ -13,7 +13,10 @@ const getCollectionByUid = (uid) => new Promise((resolve, reject) => {
 
 const getCollectionById = (recordId) => axios.get(`${baseUrl}/records/${recordId}.json`);
 
+const addAlbum = (newAlbum) => axios.post(`${baseUrl}/records.json`, newAlbum);
+
 export default {
   getCollectionByUid,
   getCollectionById,
+  addAlbum,
 };

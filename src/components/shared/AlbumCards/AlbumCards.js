@@ -14,7 +14,7 @@ const AlbumCards = (props) => {
       <div className="card-body">
         <h3 className="card-title text-left">{record.artist}</h3>
         <h4 className="card-title album-title text-left">{record.album}</h4>
-        <Link to={singleRecordLink}className="btn btn-primary viewButton">View Album</Link>
+        <Link to={singleRecordLink} className="btn btn-primary viewButton">View Album</Link>
       </div>
     </div>
   );
