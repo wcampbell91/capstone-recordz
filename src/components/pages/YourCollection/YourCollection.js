@@ -82,7 +82,16 @@ const YourCollection = (props) => {
       .catch((err) => console.error(err));
   };
 
-  const albumCards = collection.map((record) => <AlbumCards key={record.id} record={record} deleteRecord={deleteRecord}/>);
+  const editRecord = (NewAlbum) => {
+    collectionData.updateAlbum(NewAlbum)
+      .then((res) => {
+        console.warn(res);
+        getCollection();
+      })
+      .catch((err) => console.error(err));
+  };
+
+  const albumCards = collection.map((record) => <AlbumCards key={record.id} record={record} deleteRecord={deleteRecord} editRecord={editRecord}/>);
 
   return (
     <div className="YourCollection container-fluid">
