@@ -49,7 +49,7 @@ ol {
 }
 
 .flip-card-back {
-  background-color: #173F5F;
+  background-color: $card-color;
   color: white;
   transform: rotateY(180deg);
   display: grid;
@@ -63,7 +63,7 @@ ol {
 .card-img-overlay {
   display: grid;
   grid-template: 1 / 2;
-  background-color: #173F5F;
+  background-color: $card-color;
   opacity: 0;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
