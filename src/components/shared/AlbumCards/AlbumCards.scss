@@ -1,7 +1,7 @@
 @import '../../../styles/variables';
 
 .albumCard {
-  background-color: #173F5F;
+  background-color: $card-color;
   box-shadow: 10px 10px 10px;
   margin: 15px;
   flex-basis: 30% !important;
@@ -27,7 +27,7 @@
 }
 
 .deleteButton {
-  background-color: $button-text-color !important;
+  background-color: $delete-color !important;
   color: whitesmoke !important;
   border: 0px !important;
 }
