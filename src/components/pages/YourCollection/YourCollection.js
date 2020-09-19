@@ -106,7 +106,7 @@ const YourCollection = (props) => {
             </div>
         </div>
         <div className="add">
-          <Link to="/add" className="newButton text-right btn btn-danger">Add New Record</Link>
+          <Link to="/add" className="newButton btn btn-danger">Add New Record</Link>
         </div>
       </div>
 

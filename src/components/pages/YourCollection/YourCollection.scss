@@ -38,5 +38,11 @@
   background-color: $button-text-color !important;
   color: $button-color !important;
   border: 0px !important;
-  justify-content: right;
+}
+
+.add {
+  grid-column: 2 / 2;
+  text-align: right !important;
+  margin-top: 55px !important;
+  margin-right: 160px !important;
 }
