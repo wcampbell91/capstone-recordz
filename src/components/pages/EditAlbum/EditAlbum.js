@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import authData from '../../../helpers/data/authData';
 import collectionData from '../../../helpers/data/collectionData';
 
 const EditAlbum = (props) => {
@@ -60,7 +59,6 @@ const EditAlbum = (props) => {
         props.history.push(`/single/${recordId}`);
       })
       .catch((err) => console.error(err));
-
   };
 
   return (

@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 
 import recordImg from '../../shared/Images/vinyl-icon-2.png';
 import elevators from '../../shared/Images/13thfloorelevators.jpg';
+import dino from '../../shared/Images/dino.jpg';
+import bonnie from '../../shared/Images/bonnie.jpg';
+import miles from '../../shared/Images/miles.jpg';
+import minutemen from '../../shared/Images/minutemen.jpg';
+import sonic from '../../shared/Images/sonic.jpg';
+import velvet from '../../shared/Images/velvet.jpg';
 import './Home.scss';
 
 const Home = () => {
@@ -51,7 +57,32 @@ const Home = () => {
             </h6>
           </div>
           <div className="blowout-img text-center">
-          <img className="elevatorsImg" src={elevators} alt="Recordz Logo" width="600" height="600" />
+            <div id="albumCarousel" className="carousel slide" data-ride="carousel">
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img className="d-block w-100" src={elevators} alt="First slide" />
+                </div>
+                <div className="carousel-item">
+                  <img className="d-block w-100" src={dino} alt="Second slide" />
+                </div>
+                <div className="carousel-item">
+                  <img className="d-block w-100" src={bonnie} alt="Third slide" />
+                </div>
+                <div className="carousel-item">
+                  <img className="d-block w-100" src={velvet} alt="Fourth slide" />
+                </div>
+                <div className="carousel-item">
+                  <img className="d-block w-100" src={miles} alt="Fifth slide" />
+                </div>
+                <div className="carousel-item">
+                  <img className="d-block w-100" src={sonic} alt="Sixth slide" />
+                </div>
+                <div className="carousel-item">
+                  <img className="d-block w-100" src={minutemen} alt="Seventh slide" />
+                </div>
+              </div>
+            </div>
+            {/* <img className="elevatorsImg" src={elevators} alt="Recordz Logo" width="600" height="600" /> */}
           </div>
         </div>
       </div>
