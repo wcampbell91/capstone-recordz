@@ -70,7 +70,7 @@ const SingleAlbum = (props) => {
               </ol>
             </div>
             <div className="discogsLink">
-              <a href={recordDetail.resourceUrl} className="btn btn-danger mt-4 button">See More at Discogs</a>
+              <a href={recordDetail.uri} className="btn btn-danger mt-4 button">See More at Discogs</a>
             </div>
           </div>
         </div>
