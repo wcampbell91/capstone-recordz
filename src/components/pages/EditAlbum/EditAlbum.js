@@ -48,6 +48,12 @@ const EditAlbum = (props) => {
     setRecord({ ...record, coverImage });
   };
 
+  const editRearCoverImageEvent = (e) => {
+    e.preventDefault();
+    const rearCoverImage = e.target.value;
+    setRecord({ ...record, rearCoverImage });
+  };
+
   const updateRecordEvent = (e) => {
     e.preventDefault();
     const newRecord = record;
@@ -132,7 +138,18 @@ const EditAlbum = (props) => {
             onChange={editCoverImageEvent}
             />
           </div>
-          <button className="btn btn-danger" type="submit" onClick={updateRecordEvent}>Save</button>
+          <div className="form-group">
+            <label htmlFor ="rearCoverImg">Rear Cover Art</label>
+            <input
+            type="text"
+            className="form-control"
+            id="rearCoverImg"
+            placeholder="Enter Image Url"
+            value={record.rearCoverImage}
+            onChange={editRearCoverImageEvent}
+            />
+          </div>
+          <button className="btn button btn-danger" type="submit" onClick={updateRecordEvent}>Save</button>
         </form>
       </div>
     </div>
