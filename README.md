@@ -1,8 +1,8 @@
 # Welcome to Recordz!
-* Have you ever forgotten what records you have? Do you want to listen to something different that may be in the lost cracks of your collection? Or do you just want to look through your collection right here in the palm of your hand? With Recordz you can do all that and more. We'll be your one-stop shop for digitally storing  and viewing your record collection!
+* Has Your record colldection gotten out of hand? Do you want to listen to something different that maybe got lost in the mix? Or do you just want to look through your collection in a way that's more akin to flipping through a record bin at your favorite record store? With Recordz you can do all that and more. We'll be your one-stop shop for digitally storing and viewing your record collection to your heart's content!
 
 ## RNDM Pick
-* Randomly pick a record from your collection when you're feeling lazy, but want to be reminded of a record lost in the deep dark recesses of your collection.
+* Randomly pick a record from your collection when you're feeling lazy, but want to be reminded of a record that may be lost in the deep dark recesses of your collection.
 
 ## View Your Collection
 * Powered by the Discogs API, Recordz will show you your albums in all their 12" glory with album art front and center. And With a few clicks, you can dig deeper to find out more about your favorite record or artist.

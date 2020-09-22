@@ -11,6 +11,7 @@ const AddAlbum = () => {
   const [albumId, setAlbumId] = useState('');
   const [genre, setGenre] = useState('');
   const [coverImage, setCoverImage] = useState('');
+  const [rearCoverImage, setRearCoverImage] = useState('');
   const history = useHistory();
 
   const setArtistEvent = (e) => {
@@ -43,6 +44,11 @@ const AddAlbum = () => {
     setCoverImage(e.target.value);
   };
 
+  const setRearCoverImageEvent = (e) => {
+    e.preventDefault();
+    setRearCoverImage(e.target.value);
+  };
+
   const createAlbumEvent = (e) => {
     e.preventDefault();
     const newAlbum = {
@@ -52,6 +58,7 @@ const AddAlbum = () => {
       albumId,
       genre,
       coverImage,
+      rearCoverImage,
       uid: authData.getUid(),
     };
 
@@ -133,7 +140,18 @@ const AddAlbum = () => {
             onChange={setCoverImageEvent}
             />
           </div>
-          <button className="btn btn-danger" type="submit" onClick={createAlbumEvent}>Submit</button>
+          <div className="form-group">
+            <label htmlFor ="rearCoverImg">Rear Cover Art</label>
+            <input
+            type="text"
+            className="form-control"
+            id="rearCoverImg"
+            value={rearCoverImage}
+            placeholder="Enter Image Url"
+            onChange={setRearCoverImageEvent}
+            />
+          </div>
+          <button className="btn button btn-danger" type="submit" onClick={createAlbumEvent}>Submit</button>
         </form>
       </div>
     </div>
