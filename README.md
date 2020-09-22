@@ -13,6 +13,9 @@
 ## See your album art in all of it's original 12" glory!
 * Vinyl is meant to be seen, felt, grasped in your hands and dissected. Here at Recordz we take this experience very seriously. We've tried to replicate that feeling by displaying you albums art first, and when clicked they will flip over revealing all other desirable information through the power of the Discogs API.
 
+# Deployed Link
+* https://recordz-fb042.web.app
+
 ## Screenshots 
 * Homepage 
 ![homepage](https://i.imgur.com/KC1HYnT.png)
