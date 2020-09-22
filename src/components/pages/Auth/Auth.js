@@ -1,9 +1,16 @@
 import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import Carousel from 'react-bootstrap/Carousel';
 
 import recordImg from '../../shared/Images/vinyl-icon-2.png';
 import elevators from '../../shared/Images/13thfloorelevators.jpg';
+import dino from '../../shared/Images/dino.jpg';
+import bonnie from '../../shared/Images/bonnie.jpg';
+import miles from '../../shared/Images/miles.jpg';
+import minutemen from '../../shared/Images/minutemen.jpg';
+import sonic from '../../shared/Images/sonic.jpg';
+import velvet from '../../shared/Images/velvet.jpg';
 import './Auth.scss';
 
 const Auth = () => {
@@ -22,7 +29,7 @@ const Auth = () => {
           <h6 className="text-center m-4">
             Have you ever forgotten what records you have? Do you want to listen to something different that may be in the lost cracks of your collection? Or do you just want to look through your collection right here in the palm of your hand? With Recordz you can do all that and more. We'll be your one-stop shop for digitally storing and viewing your record collection!
           </h6>
-          <button className="btn btn-danger text-center pl-4 pr-4" onClick={loginClickEvent}><i className="fab fa-googl fa-lg mr-2"></i>Login</button>
+          <button className="btn btn-danger button text-center pl-4 pr-4" onClick={loginClickEvent}><i className="fab fa-google fa-lg mr-2"></i>Login</button>
         </div>
         <div className="recordImg text-center">
         <img src={recordImg} alt="Recordz Logo" width="500" height="500" />
@@ -59,7 +66,63 @@ const Auth = () => {
           </h6>
         </div>
         <div className="blowout-img text-center">
-        <img className="elevatorsImg" src={elevators} alt="Recordz Logo" width="600" height="600" />
+          <Carousel
+          controls={false}
+          interval={5000}
+          wrap={true}
+          // fade={true}
+          pause={'hover'}
+          >
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-item"
+                src={elevators}
+                alt="First slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={bonnie}
+                alt="Second slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={dino}
+                alt="Third slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={miles}
+                alt="Fourth slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={minutemen}
+                alt="Fifth slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={sonic}
+                alt="Sixth slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={velvet}
+                alt="Seventh slide"
+              />
+            </Carousel.Item>
+          </Carousel>
         </div>
       </div>
     </div>

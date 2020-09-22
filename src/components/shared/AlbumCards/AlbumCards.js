@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './AlbumCards.scss';
 
 const AlbumCards = (props) => {
-  const { record, deleteRecord, editRecord } = props;
+  const { record, deleteRecord } = props;
 
   const singleRecordLink = `/single/${record.id}`;
 

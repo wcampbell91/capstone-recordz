@@ -3,7 +3,6 @@ import { Redirect } from 'react-router-dom';
 
 import collectionData from '../../../helpers/data/collectionData';
 import authData from '../../../helpers/data/authData';
-import SingleAlbum from '../SingleAlbum/SingleAlbum';
 
 const RandomRecord = (props) => {
   const [collection, setCollection] = useState([]);

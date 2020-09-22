@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
 
 import collectionData from '../../../helpers/data/collectionData';
 import discogsData from '../../../helpers/data/discogsData';
@@ -67,8 +66,10 @@ const SingleAlbum = (props) => {
                 <button className="btn btn-danger mb-3 mt-3" onClick={moreInfoEvent}>Back</button>
               </div>
               <div className="artistInfo">
-                {artist.name && artist.name.length ? <h2>{artist.name}</h2> : ''}
-                {artist.profile && artist.profile.length ? <h6>{artist.profile}</h6> : ''}
+                <div className="artistblah">
+                  {artist.name && artist.name.length ? <h2>{artist.name}</h2> : ''}
+                  {artist.profile && artist.profile.length ? <h6>{artist.profile}</h6> : ''}
+                </div>
               </div>
               <div className="detailInfo text-left pl-4">
                 {recordDetail.title ? <h2 className="mt-3">{recordDetail.title}</h2> : ''}
