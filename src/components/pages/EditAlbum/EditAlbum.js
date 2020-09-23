@@ -58,10 +58,8 @@ const EditAlbum = (props) => {
     e.preventDefault();
     const newRecord = record;
     const { recordId } = props.match.params;
-    console.error(newRecord);
     collectionData.updateAlbum(recordId, newRecord)
       .then((res) => {
-        console.warn(res);
         props.history.push(`/single/${recordId}`);
       })
       .catch((err) => console.error(err));

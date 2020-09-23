@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .navbar-brand {
   font-size: 24pt !important;
 }
@@ -15,4 +17,7 @@
 
 nav {
   background-color: $page-background;
+}
+.navbar-brand {
+  color: $text-color !important ;
 }

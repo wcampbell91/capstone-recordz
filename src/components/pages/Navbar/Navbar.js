@@ -17,27 +17,29 @@ const MyNavbar = (props) => {
     setIsOpen(!isOpen);
   };
 
+  const show = (isOpen) ? 'show' : '';
+
   // eslint-disable-next-line consistent-return
   const buildNavbar = () => {
     if (authed) {
       return (
-        <nav className="ml-auto">
+        <ul className="navbar-nav ml-auto">
           <NavLink className="navlink" tag={NavLink} to="/home"> Home </NavLink>
-          <NavLink className="navlink" tag={NavLink} to="/collection"> MyCollection </NavLink>
+          <NavLink className="navlink" tag={NavLink} to="/collection"> My Collection </NavLink>
           <NavLink className="navlink" tag={NavLink} to="/random"> RNDM </NavLink>
           <NavLink className="navlink logout" tag={NavLink} to="" onClick={logMeOut}> Logout </NavLink>
-        </nav>
+        </ul>
       );
     }
   };
 
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg navbar-light">
       <NavLink className="navlink navbar-brand" to="/home">Recordz</NavLink>
-      <button className="navbar-toggler" type="button" onClick={toggle}>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation" onClick={toggle}>
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse">
+      <div className={`collapse navbar-collapse ${show}`} id="navbarToggle">
           {buildNavbar()}
       </div>
     </nav>

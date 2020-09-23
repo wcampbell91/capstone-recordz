@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const authBaseUrl = 'https://wc-recordz.herokuapp.com/api';
-const baseUrl = 'https://api.discogs.com/';
+const baseUrl = 'https://api.discogs.com';
 
 const getArtistByName = (artistName) => axios.get(`${authBaseUrl}/database/search?q=${artistName}&type=artist`);
 

@@ -55,6 +55,9 @@ ol {
   transform: rotateY(180deg);
   display: grid;
   grid-template: 1 / 1;
+  border-radius: 15px;
+  height: 770px;
+  width: 770px;
 }
 
 .card-img {
@@ -68,7 +71,7 @@ ol {
   opacity: 0;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  width: 800px;
+  width: 100%;
   height: 100px;
   transition: .5s;
 }
@@ -78,10 +81,11 @@ ol {
   grid-template: 1 / 2;
   background-color: $card-color;
   opacity: 0;
-  border-radius: 15px;
-  width: 800px;
-  height: 817px;
+  border-radius: 15px !important;
+  width: 100%;
+  height: 100%;
   transition: .5s;
+  padding: 0px;
 }
 
 .info {
@@ -102,6 +106,11 @@ ol {
 }
 .singleAlbumRearImg:hover + .card-img-overlay{
   opacity: 1;
+}
+
+.singleAlbumRearImg {
+  height: 100%;
+  width: 100%;
 }
 
 
