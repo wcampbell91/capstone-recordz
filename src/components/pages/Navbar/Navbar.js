@@ -34,7 +34,7 @@ const MyNavbar = (props) => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg navbar-light">
       <NavLink className="navlink navbar-brand" to="/home">Recordz</NavLink>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation" onClick={toggle}>
         <span className="navbar-toggler-icon"></span>
