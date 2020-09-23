@@ -37,7 +37,7 @@ const SingleAlbum = (props) => {
     setFlipped(!flipped);
   };
 
-  const flipClass = flipped ? 'flipper' : '';
+  const flipClass = flipped ? 'flipper container-fluid' : 'container-fluid';
   const flipClass2 = flipped ? 'card-img-overlay' : 'card-img-overlay image';
   const flipClass3 = flipped ? 'card-img-overlay rearImage' : 'card-img-overlay';
 
@@ -87,7 +87,7 @@ const SingleAlbum = (props) => {
               <div className="tracklist">
                 <h2 className="text-left mt-3 ml-3">Tracklist:</h2>
                 <ol className="">
-                  { tracklist ? tracklist.map((track) => <li className="text-left">{track.title}</li>) : ''}
+                  { tracklist ? tracklist.map((track) => <li className="text-left" key={track.title}>{track.title}</li>) : ''}
                 </ol>
               </div>
               <div className="discogsLink">
