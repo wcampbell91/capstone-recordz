@@ -19,7 +19,6 @@
 ## Screenshots 
 * Homepage 
 ![homepage](https://i.imgur.com/KC1HYnT.png)
-![homepage2](https://i.imgur.com/IgBKIgX.png)
 
 * Collection Page
 ![collection](https://i.imgur.com/R1sPBhU.png)
