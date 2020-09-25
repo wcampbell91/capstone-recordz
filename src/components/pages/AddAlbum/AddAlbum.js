@@ -3,12 +3,13 @@ import { useHistory } from 'react-router-dom';
 
 import authData from '../../../helpers/data/authData';
 import collectionData from '../../../helpers/data/collectionData';
+import discogsData from '../../../helpers/data/discogsData';
 
 const AddAlbum = () => {
   const [artist, setArtist] = useState('');
-  const [artistId, setArtistId] = useState('');
+  //const [artistId, setArtistId] = useState('');
   const [album, setAlbum] = useState('');
-  const [albumId, setAlbumId] = useState('');
+  //const [albumId, setAlbumId] = useState('');
   const [genre, setGenre] = useState('');
   const [coverImage, setCoverImage] = useState('');
   const [rearCoverImage, setRearCoverImage] = useState('');
@@ -19,9 +20,15 @@ const AddAlbum = () => {
     setArtist(e.target.value);
   };
 
-  const setArtistIdEvent = (e) => {
-    e.preventDefault();
-    setArtistId(e.target.value);
+  const getArtistId = async (e) => {
+    try {
+      const res = await discogsData.getArtistByName(artist);
+      console.warn(res.data.results[0].id);
+      return res.data.results[0].id;
+    } catch (err) {
+      console.error(err);
+    }
+    return null;
   };
 
   const setAlbumEvent = (e) => {
@@ -29,9 +36,15 @@ const AddAlbum = () => {
     setAlbum(e.target.value);
   };
 
-  const setAlbumIdEvent = (e) => {
-    e.preventDefault();
-    setAlbumId(e.target.value);
+  const getAlbumId = async (e) => {
+    try {
+      const res = await discogsData.getAlbumByName(album);
+      console.warn(res.data.results[0].id);
+      return res.data.results[0].id;
+    } catch (err) {
+      console.error(err);
+    }
+    return null;
   };
 
   const setGenreEvent = (e) => {
@@ -49,8 +62,7 @@ const AddAlbum = () => {
     setRearCoverImage(e.target.value);
   };
 
-  const createAlbumEvent = (e) => {
-    e.preventDefault();
+  const createAlbumEvent = (artistId, albumId) => {
     const newAlbum = {
       artist,
       artistId,
@@ -61,14 +73,20 @@ const AddAlbum = () => {
       rearCoverImage,
       uid: authData.getUid(),
     };
-
+    console.warn(newAlbum);
     collectionData.addAlbum(newAlbum)
       .then((res) => {
-        console.warn('add worked', res);
         history.push('/collection');
       })
       .catch((err) => console.error(err));
   };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    const [artistId, albumId] = await Promise.all([getArtistId(), getAlbumId()]);
+    createAlbumEvent(artistId, albumId);
+  };
+
   return (
     <div className="AddAlbum">
       <h1>Add A Record</h1>
@@ -85,7 +103,7 @@ const AddAlbum = () => {
             onChange={setArtistEvent}
             />
           </div>
-          <div className="form-group">
+          {/* <div className="form-group">
             <label htmlFor ="artistId">Artist Id</label>
             <input
             type="text"
@@ -95,7 +113,7 @@ const AddAlbum = () => {
             placeholder="Enter Artist Id"
             onChange={setArtistIdEvent}
             />
-          </div>
+          </div> */}
           <div className="form-group">
             <label htmlFor ="albumName">Album Name</label>
             <input
@@ -107,7 +125,7 @@ const AddAlbum = () => {
             onChange={setAlbumEvent}
             />
           </div>
-          <div className="form-group">
+          {/* <div className="form-group">
             <label htmlFor ="albumId">Album Id</label>
             <input
             type="text"
@@ -117,7 +135,7 @@ const AddAlbum = () => {
             placeholder="Enter Album Id"
             onChange={setAlbumIdEvent}
             />
-          </div>
+          </div> */}
           <div className="form-group">
             <label htmlFor ="genre">Genre</label>
             <input
@@ -151,7 +169,7 @@ const AddAlbum = () => {
             onChange={setRearCoverImageEvent}
             />
           </div>
-          <button className="btn button btn-danger" type="submit" onClick={createAlbumEvent}>Submit</button>
+          <button className="btn button btn-danger" type="submit" onClick={onSubmit}>Submit</button>
         </form>
       </div>
     </div>

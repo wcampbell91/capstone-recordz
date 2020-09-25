@@ -16,6 +16,7 @@ const SingleAlbum = (props) => {
     const { recordId } = props.match.params;
     collectionData.getCollectionById(recordId)
       .then((res) => {
+        console.warn(res.data);
         setRecord(res.data);
       })
       .catch((err) => console.error(err));

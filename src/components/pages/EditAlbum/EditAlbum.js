@@ -18,22 +18,10 @@ const EditAlbum = (props) => {
     setRecord({ ...record, artist });
   };
 
-  const editArtistIdEvent = (e) => {
-    e.preventDefault();
-    const artistId = e.target.value;
-    setRecord({ ...record, artistId });
-  };
-
   const editAlbumEvent = (e) => {
     e.preventDefault();
     const album = e.target.value;
     setRecord({ ...record, album });
-  };
-
-  const editAlbumIdEvent = (e) => {
-    e.preventDefault();
-    const albumId = e.target.value;
-    setRecord({ ...record, albumId });
   };
 
   const editGenreEvent = (e) => {
@@ -82,17 +70,6 @@ const EditAlbum = (props) => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor ="artistId">Artist Id</label>
-            <input
-            type="value"
-            className="form-control"
-            id="artistId"
-            placeholder="Enter Artist Id"
-            value={record.artistId}
-            onChange={editArtistIdEvent}
-            />
-          </div>
-          <div className="form-group">
             <label htmlFor ="recordName">record Name</label>
             <input
             type="text"
@@ -101,17 +78,6 @@ const EditAlbum = (props) => {
             placeholder="Enter record Name"
             value={record.album}
             onChange={editAlbumEvent}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor ="recordId">record Id</label>
-            <input
-            type="value"
-            className="form-control"
-            id="recordId"
-            placeholder="Enter record Id"
-            value={record.albumId}
-            onChange={editAlbumIdEvent}
             />
           </div>
           <div className="form-group">
