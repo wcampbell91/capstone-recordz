@@ -7,9 +7,7 @@ import discogsData from '../../../helpers/data/discogsData';
 
 const AddAlbum = () => {
   const [artist, setArtist] = useState('');
-  //const [artistId, setArtistId] = useState('');
   const [album, setAlbum] = useState('');
-  //const [albumId, setAlbumId] = useState('');
   const [genre, setGenre] = useState('');
   const [coverImage, setCoverImage] = useState('');
   const [rearCoverImage, setRearCoverImage] = useState('');
@@ -103,17 +101,6 @@ const AddAlbum = () => {
             onChange={setArtistEvent}
             />
           </div>
-          {/* <div className="form-group">
-            <label htmlFor ="artistId">Artist Id</label>
-            <input
-            type="text"
-            className="form-control"
-            id="artistId"
-            value={artistId}
-            placeholder="Enter Artist Id"
-            onChange={setArtistIdEvent}
-            />
-          </div> */}
           <div className="form-group">
             <label htmlFor ="albumName">Album Name</label>
             <input
@@ -125,17 +112,6 @@ const AddAlbum = () => {
             onChange={setAlbumEvent}
             />
           </div>
-          {/* <div className="form-group">
-            <label htmlFor ="albumId">Album Id</label>
-            <input
-            type="text"
-            className="form-control"
-            id="albumId"
-            value={albumId}
-            placeholder="Enter Album Id"
-            onChange={setAlbumIdEvent}
-            />
-          </div> */}
           <div className="form-group">
             <label htmlFor ="genre">Genre</label>
             <input
