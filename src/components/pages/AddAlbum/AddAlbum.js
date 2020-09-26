@@ -37,8 +37,8 @@ const AddAlbum = () => {
   const getAlbumId = async (e) => {
     try {
       const res = await discogsData.getAlbumByName(album);
-      console.warn(res.data.results[0].id);
-      return res.data.results[0].id;
+      console.warn(res.data.results[0].master_id);
+      return res.data.results[0].master_id;
     } catch (err) {
       console.error(err);
     }
